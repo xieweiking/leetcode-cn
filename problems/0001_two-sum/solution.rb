@@ -1,3 +1,5 @@
+#!/usr/bin/ruby
+
 # @param {Integer[]} nums
 # @param {Integer} target
 # @return {Integer[]}
