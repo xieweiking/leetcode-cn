@@ -1,5 +1,5 @@
-#include <stdio.h>;
-#include <uthash.h>;
+#include <stdio.h>
+#include <uthash.h>
 
 #define DEF_DICT_CLEAR(M)                       \
 void M ## _clear() {                            \
