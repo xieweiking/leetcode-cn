@@ -12,8 +12,8 @@
 所以返回 [0, 1]
 ```
 
-<a href="https://leetcode-cn.com/problems/two-sum/" target="_blank">详情见力扣</a>
+[详情见力扣](https://leetcode-cn.com/problems/two-sum/)
 
 # 分析
 
-<a href="https://bruceking.site/2019/12/29/leetcode-cn-problem-0001-two-sum/" target="_blank">详情见博客</a>
+[详情见博客](https://bruceking.site/2019/12/29/leetcode-cn-problem-0001-two-sum/)
