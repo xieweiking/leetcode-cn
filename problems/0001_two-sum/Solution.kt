@@ -5,7 +5,7 @@ class Solution {
             val j = m[target - num]
             if (j != null)
                 return intArrayOf(j, i)
-            m.put(num, i)
+            m[num] = i
         }
         throw Exception("No match value for $nums, $target!")
     }
