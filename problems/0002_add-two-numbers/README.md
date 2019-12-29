@@ -13,8 +13,8 @@
 原因：342 + 465 = 807
 ```
 
-[详情见力扣](https://leetcode-cn.com/problems/add-two-numbers/)
+<a href="https://leetcode-cn.com/problems/add-two-numbers/" target="_blank">详情见力扣</a>
 
 # 分析
 
-[详情见博客](https://bruceking.site/2019/12/30/leetcode-cn-problem-0002-add-two-numbers/)
+<a href="https://bruceking.site/2019/12/30/leetcode-cn-problem-0002-add-two-numbers/" target="_blank">详情见博客</a>
