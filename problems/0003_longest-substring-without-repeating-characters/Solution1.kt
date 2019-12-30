@@ -6,17 +6,17 @@ class Solution {
         s.forEach { c ->
             val idx = find(s, c, start, end)
             ++end
-            if (idx == -1)
+            if (idx == null)
                 max = Math.max(max, end - start)
             else
                 start = idx + 1
         }
         return max
     }
-    inline fun find(s: String, c: Char, start: Int, end: Int): Int {
+    inline fun find(s: String, c: Char, start: Int, end: Int): Int? {
         for (i in start..(end - 1))
             if (s[i] == c)
                 return i
-        return -1
+        return null
     }
 }
