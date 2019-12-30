@@ -29,4 +29,4 @@
 
 # 分析
 
-[详情见博客](https://bruceking.site/2019/12/30/leetcode-cn-problem-0002-longest-substring-without-repeating-characters/)
+[详情见博客](https://bruceking.site/2019/12/31/leetcode-cn-problem-0002-longest-substring-without-repeating-characters/)
