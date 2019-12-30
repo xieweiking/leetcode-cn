@@ -5,7 +5,7 @@ impl Solution {
         let mut max = 0;
         let (mut start, mut end) = (0 as usize, 0 as usize);
         for c in s.chars() {
-            let x = Self::find(s.as_ptr(), c, start, end);
+            let x = Self::index_of(s.as_ptr(), c, start, end);
             end += 1;
             if let Some(idx) = x {
                 start = idx + 1;
@@ -16,7 +16,7 @@ impl Solution {
         max
     }
     #[inline]
-    fn find(ptr: *const u8, c: char, start: usize, end: usize) -> Option<usize> {
+    fn index_of(ptr: *const u8, c: char, start: usize, end: usize) -> Option<usize> {
         for i in start..end {
             if unsafe { *(ptr.add(i)) } as char == c {
                 return Some(i);

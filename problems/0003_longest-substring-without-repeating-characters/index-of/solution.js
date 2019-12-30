@@ -4,15 +4,14 @@
  */
 var lengthOfLongestSubstring = function (s) {
     'use strict'
-    function find(c, start, end) {
+    function indexOf(c, start, end) {
         for (let i = start; i < end; ++i)
             if (s[i] === c)
                 return i
     }
     let max = 0
-    for (let i = 0, start = 0, end = 0; i < s.length; ++i) {
-        const idx = find(s[i], start, end)
-        ++end
+    for (let start = 0, end = 0; end < s.length;) {
+        const idx = indexOf(s[end], start, end++)
         if (idx === undefined)
             max = Math.max(max, end - start)
         else

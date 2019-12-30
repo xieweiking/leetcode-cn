@@ -12,8 +12,7 @@ public:
     int lengthOfLongestSubstring(string s) {
         size_t m = 0, start = 0, end = 0;
         for (const char& c : s) {
-            const size_t idx = indexOf(s, c, start, end);
-            ++end;
+            const size_t idx = indexOf(s, c, start, end++);
             if (idx == string::npos)
                 m = max(m, end - start);
             else

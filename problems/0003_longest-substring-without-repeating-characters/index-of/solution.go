@@ -1,7 +1,7 @@
 func lengthOfLongestSubstring(s string) int {
     max, l := 0, len(s)
-    for i, start, end := 0, 0, 0; i < l; i += 1 {
-        idx := find(s, s[i], start, end)
+    for start, end := 0, 0; end < l; {
+        idx := indexOf(s, s[end], start, end)
         end += 1
         if idx == -1 {
             m := end - start
@@ -15,7 +15,7 @@ func lengthOfLongestSubstring(s string) int {
     return max
 }
 
-func find(s string, c byte, start, end int) int {
+func indexOf(s string, c byte, start, end int) int {
     for i := start; i < end; i += 1 {
         if s[i] == c {
             return i

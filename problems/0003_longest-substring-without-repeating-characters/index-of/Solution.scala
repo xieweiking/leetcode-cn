@@ -2,7 +2,7 @@ object Solution {
     def lengthOfLongestSubstring(s: String): Int = {
         var (max, start, end) = (0, 0, 0)
         for (c <- s) {
-            val x = find(s, c, start, end)
+            val x = indexOf(s, c, start, end)
             end += 1
             x match {
                 case Some(idx) =>
@@ -14,7 +14,7 @@ object Solution {
         max
     }
     @inline
-    def find(s: String, c: Char, start: Int, end: Int): Option[Int] = {
+    def indexOf(s: String, c: Char, start: Int, end: Int): Option[Int] = {
         for (i <- start until end)
             if (s(i) == c)
                 return Some(i)

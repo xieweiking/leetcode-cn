@@ -7,10 +7,9 @@ class Solution {
     function lengthOfLongestSubstring($s) {
         $max = 0;
         $start = 0;
-        $end = 0;
         $l = strlen($s);
-        for ($i = 0; $i < $l; ++$i) {
-            $idx = self::find($s, $s[$i], $start, $end);
+        for ($end = 0; $end < $l;) {
+            $idx = self::indexOf($s, $s[$end], $start, $end);
             ++$end;
             if ($idx === FALSE)
                 $max = max($max, $end - $start);
@@ -19,7 +18,7 @@ class Solution {
         }
         return $max;
     }
-    static function find($s, $c, $start, $end) {
+    static function indexOf($s, $c, $start, $end) {
         for ($i = $start; $i < $end; ++$i)
             if ($s[$i] === $c)
                 return $i;
