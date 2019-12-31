@@ -21,3 +21,9 @@ nums2 = [3, 4]
 
 则中位数是 (2 + 3)/2 = 2.5
 ```
+
+[详情见力扣](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)
+
+# 分析
+
+[详情见博客](https://bruceking.site/2020/01/01/leetcode-cn-problem-0004-median-of-two-sorted-arrays/)
