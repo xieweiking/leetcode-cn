@@ -6,36 +6,33 @@
 var findMedianSortedArrays = function (nums1, nums2) {
     'use strict'
     const [A, B] = (nums1.length <= nums2.length ?
-            [nums1, nums2] :
-            [nums2, nums1])
-    const total = A.length + B.length,
-          isOdd = (total % 2 === 1),
-          half = (total + 1) >> 1
-    for (let iMin = 0, iMax = A.length; iMin <= iMax;) {
-        const i = (iMin + iMax) >> 1,
-              j = half - i,
-              a = A[i],
-              aPrev = A[i - 1],
-              b = B[j],
-              bPrev = B[j - 1]
-        if (i < iMax && a < bPrev)
-            iMin = i + 1
-        else if (i > iMin && aPrev > b)
-            iMax = i - 1
+                    [nums1, nums2] : [nums2, nums1]),
+          m = A.length,
+          n = B.length,
+          total = m + n,
+          h = total >> 1,
+          isOdd = (total % 2 === 1)
+    for (let iBegin = 0, iEnd = m; iBegin <= iEnd;) {
+        const i = (iBegin + iEnd) >> 1,
+              j = h - i
+        if (i < iEnd && A[i] < B[j - 1]) // A[i] is too small
+            iBegin = i + 1
+        else if (iBegin < i && B[j] < A[i - 1]) // A[i-1] is too large
+            iEnd = i - 1
         else {
-            const left = (i === 0 ?
-                    bPrev :
-                    (j === 0 ?
-                        aPrev :
-                        Math.max(aPrev, bPrev)))
+            const minGreater = (i === m ? // A is empty OR all A[i] < B[j-1]
+                    B[j] :
+                    (j === n ? // m == n AND all B[j] < A[i-1]
+                        A[i] :
+                        Math.min(A[i], B[j])))
             if (isOdd)
-                return left
-            const right = (i === A.length ?
-                    b :
-                    (j === B.length ?
-                        a :
-                        Math.min(a, b)))
-            return (left + right) / 2
+                return minGreater
+            const maxLesser = (i === 0 ? // A is empty OR all B[j] < A[i-1]
+                    B[j - 1] :
+                    (j === 0 ? // h == i AND all A[i] < B[j-1]
+                        A[i - 1] :
+                        Math.max(A[i - 1], B[j - 1])))
+            return (maxLesser + minGreater) / 2
         }
     }
     throw `Should NOT be HERE!`
