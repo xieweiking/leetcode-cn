@@ -11,10 +11,10 @@ class Solution {
         final int m = A.length,
                   n = B.length,
                   total = m + n,
-                  h = total >> 1;
+                  h = total / 2;
         final boolean isOdd = (total % 2 == 1);
         for (int iBegin = 0, iEnd = m; iBegin <= iEnd;) {
-            final int i = (iBegin + iEnd) >> 1,
+            final int i = (iBegin + iEnd) / 2,
                       j = h - i;
             if (i < iEnd && 0 < j && A[i] < B[j - 1])
                 iBegin = i + 1;
