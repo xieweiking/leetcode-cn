@@ -22,10 +22,10 @@ double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Si
             iEnd = i - 1;
         else {
             const int minGreater = (i == m ?
-                        B[j] :
-                        (j == n ?
-                            A[i] :
-                            MIN(A[i], B[j])));
+                    B[j] :
+                    (j == n ?
+                        A[i] :
+                        MIN(A[i], B[j])));
             if (isOdd)
                 return minGreater;
             const int maxLesser = (i == 0 ?

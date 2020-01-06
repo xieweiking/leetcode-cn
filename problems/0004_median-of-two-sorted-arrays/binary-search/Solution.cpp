@@ -19,10 +19,10 @@ public:
                 iEnd = i - 1;
             else {
                 const int minGreater = (i == m ?
-                            B[j] :
-                            (j == n ?
-                                A[i] :
-                                min(A[i], B[j])));
+                        B[j] :
+                        (j == n ?
+                            A[i] :
+                            min(A[i], B[j])));
                 if (isOdd)
                     return minGreater;
                 const int maxLesser = (i == 0 ?
