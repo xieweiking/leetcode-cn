@@ -15,9 +15,9 @@ var findMedianSortedArrays = function (nums1, nums2) {
     for (let iBegin = 0, iEnd = m; iBegin <= iEnd;) {
         const i = (iBegin + iEnd) >> 1,
               j = h - i
-        if (i < iEnd && A[i] < B[j - 1]) // A[i] is too small
+        if (i < iEnd && 0 < j && A[i] < B[j - 1]) // A[i] is too small
             iBegin = i + 1
-        else if (iBegin < i && B[j] < A[i - 1]) // A[i-1] is too large
+        else if (iBegin < i && j < n && B[j] < A[i - 1]) // A[i-1] is too large
             iEnd = i - 1
         else {
             const minGreater = (i === m ? // A is empty OR all A[i] < B[j-1]
