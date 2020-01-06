@@ -26,4 +26,4 @@ nums2 = [3, 4]
 
 # 分析
 
-[详情见博客](https://bruceking.site/2020/01/01/leetcode-cn-problem-0004-median-of-two-sorted-arrays/)
+[详情见博客](https://bruceking.site/2020/01/06/leetcode-cn-problem-0004-median-of-two-sorted-arrays/)
