@@ -19,4 +19,4 @@
 
 # 分析
 
-[详情见博客](https://bruceking.site/2020/01/07/leetcode-cn-problem-0005-longest-palindromic-substring/)
+[详情见博客](https://bruceking.site/2020/01/08/leetcode-cn-problem-0005-longest-palindromic-substring/)
