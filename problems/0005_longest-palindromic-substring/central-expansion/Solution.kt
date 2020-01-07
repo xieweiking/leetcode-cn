@@ -1,9 +1,8 @@
 class Solution {
     fun longestPalindrome(s: String): String {
-        val iEnd = s.length * 2 - 1
         var maxLeft = 0
         var maxRight = 0
-        for (i in 0 until iEnd) {
+        for (i in 0..(s.length * 2)) {
             var posLeft = i / 2
             var posRight = if (i % 2 == 1) posLeft + 1
                            else posLeft

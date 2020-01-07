@@ -1,7 +1,7 @@
 object Solution {
     def longestPalindrome(s: String): String = {
         var (maxLeft, maxRight) = (0, 0)
-        for (i <- 0 until s.size * 2 - 1) {
+        for (i <- 0 to s.size * 2) {
             var posLeft = i / 2
             var posRight = if (i % 2 == 1) posLeft + 1 else posLeft
             while (0 <= posLeft && posRight < s.size &&
