@@ -4,31 +4,29 @@
  */
 var longestPalindrome = function (s) {
     'use strict'
-    if (s === '')
-        return ''
-    const t = '^#' + s.split('').join('#') + '#$',
-          pLens = new Array(t.length),
-          posEnd = t.length - 1
-    for (let i = 0, posMax = 0, posRight = 1;
-            posRight < posEnd;
-            ++posRight) {
-        const posLeft = 2 * i - posRight
-        let pLen = (posMax > posRight ?
-                Math.min(posMax - posRight, pLens[posLeft]) : 0)
-        while (t[posRight + 1 + pLen] === t[posRight - 1 - pLen])
+    if (s.length <= 1)
+        return s
+    const sep = '#',
+          t = sep + [...s].join(sep) + sep,
+          pLens = new Array(t.length)
+    let c = 0, r = 0, maxPLen = 0, idx = 0
+    for (const i of pLens.keys()) {
+        const iMirror = 2 * c - i
+        let pLen = (r > i ?
+                Math.min(r - i, pLens[iMirror]) : 0)
+        for (let incrPLen = pLen + 1,
+                 posLeft = i - incrPLen,
+                 posRight = i + incrPLen;
+                0 <= posLeft && posRight < t.length &&
+                    t[posLeft] === t[posRight];
+                --posLeft, ++posRight)
             ++pLen
-        const newPosMax = posRight + (pLens[posRight] = pLen)
-        if (newPosMax > posMax) {
-            i = posRight
-            posMax = newPosMax
-        }
-    }
-    let maxPLen = 0, i = 0
-    for (let pos = 1, pLen = pLens[pos];
-            pos < posEnd;
-            pLen = pLens[++pos])
+        const newR = i + (pLens[i] = pLen)
+        if (newR > r)
+            [c, r] = [i, newR]
         if (pLen > maxPLen)
-            [maxPLen, i] = [pLen, pos]
-    const start = (i - maxPLen) >> 1
+            [maxPLen, idx] = [pLen, i]
+    }
+    const start = (idx - maxPLen) >> 1
     return s.substring(start, start + maxPLen)
 };
