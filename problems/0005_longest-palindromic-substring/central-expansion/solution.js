@@ -9,7 +9,7 @@ var longestPalindrome = function (s) {
     for (let i = 0; i < iEnd; ++i) {
         let posLeft = i >> 1,
             posRight = (i % 2 === 1 ? posLeft + 1 : posLeft)
-        while (posLeft >= 0 && posRight < s.length &&
+        while (0 <= posLeft && posRight < s.length &&
                 s[posLeft] === s[posRight]) {
             --posLeft
             ++posRight
