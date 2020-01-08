@@ -11,9 +11,9 @@ var longestPalindrome = function (s) {
           pLens = new Array(t.length)
     let c = 0, r = 0, maxPLen = 0, idx = 0
     for (const i of pLens.keys()) {
-        const iMirror = 2 * c - i
+        const j = 2 * c - i
         let pLen = (r > i ?
-                Math.min(r - i, pLens[iMirror]) : 0)
+                Math.min(r - i, pLens[j]) : 0)
         for (let incrPLen = pLen + 1,
                  posLeft = i - incrPLen,
                  posRight = i + incrPLen;
