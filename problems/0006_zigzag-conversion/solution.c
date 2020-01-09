@@ -10,9 +10,11 @@ char * convert(char * s, int numRows){
     for (int r = 0, k = 0; r < numRows; ++r)
         for (int i = r; i < sLen; i += charsPerPad) {
             result[k++] = s[i];
-            const int j = i + charsPerPad - 2 * r;
-            if (r != 0 && r != lastRow && j < sLen)
-                result[k++] = s[j];
+            if (r != 0 && r != lastRow) {
+                const int j = i + charsPerPad - 2 * r;
+                if (j < sLen)
+                    result[k++] = s[j];
+            }
         }
     return result;
 }

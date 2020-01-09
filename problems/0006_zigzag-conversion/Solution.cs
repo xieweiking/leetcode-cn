@@ -11,9 +11,11 @@ public class Solution {
         for (var r = 0; r < numRows; ++r)
             for (var i = r; i < s.Length; i += charsPerPad) {
                 buf.Append(s[i]);
-                var j = i + charsPerPad - 2 * r;
-                if (r != 0 && r != lastRow && j < s.Length)
-                    buf.Append(s[j]);
+                if (r != 0 && r != lastRow) {
+                    var j = i + charsPerPad - 2 * r;
+                    if (j < s.Length)
+                        buf.Append(s[j]);
+                }
             }
         return buf.ToString();
     }

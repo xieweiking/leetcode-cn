@@ -14,9 +14,11 @@ var convert = function (s, numRows) {
     for (let r = 0; r < numRows; ++r)
         for (let i = r; i < s.length; i += charsPerPad) {
             result += s[i]
-            const j = i + charsPerPad - 2 * r
-            if (r != 0 && r != lastRow && j < s.length)
-                result += s[j]
+            if (r != 0 && r != lastRow) {
+                const j = i + charsPerPad - 2 * r
+                if (j < s.length)
+                    result += s[j]
+            }
         }
     return result
 };

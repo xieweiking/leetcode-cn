@@ -12,7 +12,8 @@ class Solution:
             for r in range(numRows):
                 for i in range(r, sLen, charsPerPad):
                     yield s[i]
-                    j = i + charsPerPad - 2 * r
-                    if r != 0 and r != lastRow and j < sLen:
-                        yield s[j]
+                    if r != 0 and r != lastRow:
+                        j = i + charsPerPad - 2 * r
+                        if j < sLen:
+                            yield s[j]
         return ''.join(g())

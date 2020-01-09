@@ -14,9 +14,11 @@ def convert(s, num_rows)
     for r in 0..(num_rows - 1)
         for i in (r..(s.length - 1)).step(chars_per_pad)
             result << s[i]
-            j = i + chars_per_pad - 2 * r
-            if (r != 0 and r != last_row and j < s.length)
-                result << s[j]
+            if (r != 0 and r != last_row)
+                j = i + chars_per_pad - 2 * r
+                if (j < s.length)
+                    result << s[j]
+                end
             end
         end
     end

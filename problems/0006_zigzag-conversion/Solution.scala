@@ -9,9 +9,11 @@ object Solution {
         for (r <- 0 until numRows)
             for (i <- r until s.size by charsPerPad) {
                 buf += s(i)
-                val j = i + charsPerPad - 2 * r
-                if (r != 0 && r != lastRow && j < s.size)
-                    buf += s(j)
+                if (r != 0 && r != lastRow) {
+                    val j = i + charsPerPad - 2 * r
+                    if (j < s.size)
+                        buf += s(j)
+                }
             }
         buf.toString
     }

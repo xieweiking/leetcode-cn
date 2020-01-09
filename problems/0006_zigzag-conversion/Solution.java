@@ -10,9 +10,11 @@ class Solution {
         for (int r = 0; r < numRows; ++r)
             for (int i = r; i < sLen; i += charsPerPad) {
                 buf.append(s.charAt(i));
-                final int j = i + charsPerPad - 2 * r;
-                if (r != 0 && r != lastRow && j < sLen)
-                    buf.append(s.charAt(j));
+                if (r != 0 && r != lastRow) {
+                    final int j = i + charsPerPad - 2 * r;
+                    if (j < sLen)
+                        buf.append(s.charAt(j));
+                }
             }
         return buf.toString();
     }

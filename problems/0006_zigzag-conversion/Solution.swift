@@ -11,10 +11,12 @@ class Solution {
             for i in stride(from: r, to: sLen, by: charsPerPad) {
                 buf[k] = chars[i]
                 k += 1
-                let j = i + charsPerPad - 2 * r
-                if r != 0 && r != lastRow && j < sLen {
-                    buf[k] = chars[j]
-                    k += 1
+                if r != 0 && r != lastRow {
+                    let j = i + charsPerPad - 2 * r
+                    if j < sLen {
+                        buf[k] = chars[j]
+                        k += 1
+                    }
                 }
             }
         }
