@@ -7,6 +7,6 @@ var reverse = function (x) {
     let result = 0
     for (; x != 0; x = parseInt(x / 10))
         result = result * 10 + (x % 10)
-    return (result < -2147483648 || 2147483647 < result ?
+    return (result < -Math.pow(2, 31) || Math.pow(2, 31) - 1 < result ?
             0 : result);
 };
