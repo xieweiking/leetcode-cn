@@ -6,7 +6,7 @@ class Solution {
         final int colsPerPad = numRows - 1,
                   charsPerPad = colsPerPad - 1 + numRows,
                   lastRow = colsPerPad;
-        final StringBuffer buf = new StringBuffer(sLen);
+        final StringBuilder buf = new StringBuilder(sLen);
         for (int r = 0; r < numRows; ++r)
             for (int i = r; i < sLen; i += charsPerPad) {
                 buf.append(s.charAt(i));
