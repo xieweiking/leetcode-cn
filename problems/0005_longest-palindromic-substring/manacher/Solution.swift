@@ -32,6 +32,10 @@ class Solution {
             }
         }
         let start = (idx - maxPLen) / 2
-        return String(s[s.index(s.startIndex, offsetBy: start)..<s.index(s.startIndex, offsetBy: start + maxPLen)])
+        return substring(s, start, start + maxPLen)
+    }
+    @inline
+    func substring(_ s: String, _ start: Int, _ end: Int) -> String {
+        return String(s[s.index(s.startIndex, offsetBy: start)..<s.index(s.startIndex, offsetBy: end)])
     }
 }

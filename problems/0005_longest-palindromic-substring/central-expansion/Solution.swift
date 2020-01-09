@@ -15,6 +15,10 @@ class Solution {
                 (maxLeft, maxRight) = (posLeft, posRight)
             }
         }
-        return String(s[s.index(s.startIndex, offsetBy: maxLeft)..<s.index(s.startIndex, offsetBy: maxRight)])
+        return substring(s, maxLeft, maxRight)
+    }
+    @inline
+    func substring(_ s: String, _ start: Int, _ end: Int) -> String {
+        return String(s[s.index(s.startIndex, offsetBy: start)..<s.index(s.startIndex, offsetBy: end)])
     }
 }
