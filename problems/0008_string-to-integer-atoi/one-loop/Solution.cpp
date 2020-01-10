@@ -5,16 +5,18 @@ public:
         if (sLen == 0)
             return 0;
         size_t i = 0;
-        for (; str[i] == ' '; ++i);
+        for (; i < sLen && str[i] == ' '; ++i);
         long sign = 1;
-        if (str[i] == '-') {
-            ++i;
-            sign = -1;
-        } else if (str[i] == '+')
-            ++i;
+        if (i < sLen) {
+            if (str[i] == '-') {
+                ++i;
+                sign = -1;
+            } else if (str[i] == '+')
+                ++i;
+        }
         long result = 0;
-        for (char c = str[i]; i < sLen && '0' <= c && c <= '9'; c = str[++i]) {
-            result = result * 10 + sign * (c - '0');
+        for (; i < sLen && '0' <= str[i] && str[i] <= '9'; i++) {
+            result = result * 10 + sign * (str[i] - '0');
             if (result < INT_MIN)
                 return INT_MIN;
             else if (result > INT_MAX)
