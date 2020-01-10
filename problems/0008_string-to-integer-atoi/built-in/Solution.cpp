@@ -13,14 +13,11 @@ public:
                 return (int) result;
         } catch (invalid_argument& ignored) {
         } catch (out_of_range& ignored) {
-            const size_t sLen = str.length();
-            for (size_t i = 0; i < sLen; ++i) {
-                const char c = str[i];
+            for (char& c : str)
                 if (c == '-')
                     return INT_MIN;
                 else if (c == '+' || '0' <= c && c <= '9')
                     return INT_MAX;
-            }
         }
         return 0;
     }
