@@ -4,7 +4,7 @@ class Solution {
 public:
     int myAtoi(string str) {
         try {
-            const long long result = stoll(str);
+            const long result = stol(str);
             if (result < INT_MIN)
                 return INT_MIN;
             else if (result > INT_MAX)
