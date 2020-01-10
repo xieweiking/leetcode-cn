@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-int myAtoi(char * str){
+int myAtoi(char * str) {
     const long result = strtol(str, NULL, 10);
     if (result < INT_MIN)
         return INT_MIN;
