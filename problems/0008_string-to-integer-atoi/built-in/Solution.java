@@ -4,9 +4,9 @@ import java.math.BigInteger;
 
 class Solution {
     public int myAtoi(String str) {
-        try {
-            final Matcher matcher = NUM_FMT.matcher(str);
-            if (matcher.matches()) {
+        final Matcher matcher = NUM_FMT.matcher(str);
+        if (matcher.matches())
+            try {
                 final BigInteger result = new BigInteger(matcher.group(1));
                 if (result.compareTo(INT_MIN) < 0)
                     return Integer.MIN_VALUE;
@@ -14,11 +14,9 @@ class Solution {
                     return Integer.MAX_VALUE;
                 else
                     return result.intValue();
-            } else
-                return 0;
-        } catch (final NumberFormatException ignored) {
-            return 0;
-        }
+            } catch (final NumberFormatException ignored) {
+            }
+        return 0;
     }
     static final Pattern NUM_FMT = Pattern.compile("\\s*([\\-\\+]?\\d+).*");
     static final BigInteger INT_MIN = BigInteger.valueOf(Integer.MIN_VALUE),
