@@ -57,4 +57,4 @@
 
 # 分析
 
-[详情见博客](https://bruceking.site/2020/01/10/leetcode-cn-problem-0008-string-to-integer-atoi/)
+[详情见博客](https://bruceking.site/2020/01/11/leetcode-cn-problem-0008-string-to-integer-atoi/)
