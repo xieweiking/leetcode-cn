@@ -1,3 +1,5 @@
+#!/usr/bin/ruby
+
 # @param {String} str
 # @return {Integer}
 def my_atoi(str)
