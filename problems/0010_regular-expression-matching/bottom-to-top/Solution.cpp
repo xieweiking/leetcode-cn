@@ -2,7 +2,8 @@ class Solution {
 public:
     bool isMatch(string s, string p) {
         const int sLen = s.length(), pLen = p.length();
-        bool memo[sLen + 1][pLen + 1] = { { false } };
+        bool memo[sLen + 1][pLen + 1];
+        memset(&memo[0][0], false, sizeof(memo));
         memo[sLen][pLen] = true;
         for (int i = sLen; i >= 0; --i)
             for (int j = pLen - 1; j >= 0; --j) {
