@@ -8,7 +8,7 @@ class Solution {
                 final boolean matchChar = (i < sLen &&
                         (p.charAt(j) == s.charAt(i) || p.charAt(j) == '.'));
                 memo[i][j] = (j < pLen - 1 && p.charAt(j + 1) == '*' ?
-                        (memo[i][j + 2] || matchChar && memo[i + 1][j]) :
+                        (memo[i][j + 2] || (matchChar && memo[i + 1][j])) :
                         (matchChar && memo[i + 1][j + 1]));
             }
         return memo[0][0];
