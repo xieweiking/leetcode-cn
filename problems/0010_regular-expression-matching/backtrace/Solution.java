@@ -2,7 +2,7 @@ class Solution {
     public boolean isMatch(String s, String p) {
         final int sLen = s.length(), pLen = p.length();
         if (pLen == 0)
-            return sLen == 0;
+            return (sLen == 0);
         final char p0 = p.charAt(0);
         final boolean matchP0 = (sLen > 0 &&
                 (p0 == s.charAt(0) || p0 == '.'));
