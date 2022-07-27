@@ -15,8 +15,8 @@
 输出: "bb"
 ```
 
-[详情见力扣](https://leetcode-cn.com/problems/longest-palindromic-substring/)
+[详情见力扣](https://leetcode.cn/problems/longest-palindromic-substring/)
 
 # 分析
 
-[详情见博客](https://bruceking.site/2020/01/08/leetcode-cn-problem-0005-longest-palindromic-substring/)
+[详情见博客](https://bruceking.org/2020/01/08/leetcode-cn-problem-0005-longest-palindromic-substring/)

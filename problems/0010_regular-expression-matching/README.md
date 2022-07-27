@@ -59,8 +59,8 @@
 输出: false
 ```
 
-[详情见力扣](https://leetcode-cn.com/problems/regular-expression-matching/)
+[详情见力扣](https://leetcode.cn/problems/regular-expression-matching/)
 
 # 分析
 
-[详情见博客](https://bruceking.site/2020/01/13/leetcode-cn-problem-0010-regular-expression-matching/)
+[详情见博客](https://bruceking.org/2020/01/13/leetcode-cn-problem-0010-regular-expression-matching/)

@@ -53,8 +53,8 @@
      因此返回 INT_MIN (−231) 。
 ```
 
-[详情见力扣](https://leetcode-cn.com/problems/string-to-integer-atoi/)
+[详情见力扣](https://leetcode.cn/problems/string-to-integer-atoi/)
 
 # 分析
 
-[详情见博客](https://bruceking.site/2020/01/11/leetcode-cn-problem-0008-string-to-integer-atoi/)
+[详情见博客](https://bruceking.org/2020/01/11/leetcode-cn-problem-0008-string-to-integer-atoi/)

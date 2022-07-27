@@ -34,8 +34,8 @@ E C   I H   N
 T     S     G
 ```
 
-[详情见力扣](https://leetcode-cn.com/problems/zigzag-conversion/)
+[详情见力扣](https://leetcode.cn/problems/zigzag-conversion/)
 
 # 分析
 
-[详情见博客](https://bruceking.site/2020/01/09/leetcode-cn-problem-0006-zigzag-conversion/)
+[详情见博客](https://bruceking.org/2020/01/09/leetcode-cn-problem-0006-zigzag-conversion/)

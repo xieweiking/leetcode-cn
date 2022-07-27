@@ -26,8 +26,8 @@
 
 你能不将整数转为字符串来解决这个问题吗？
 
-[详情见力扣](https://leetcode-cn.com/problems/palindrome-number/)
+[详情见力扣](https://leetcode.cn/problems/palindrome-number/)
 
 # 分析
 
-[详情见博客](https://bruceking.site/2020/01/12/leetcode-cn-problem-0009-palindrome-number/)
+[详情见博客](https://bruceking.org/2020/01/12/leetcode-cn-problem-0009-palindrome-number/)

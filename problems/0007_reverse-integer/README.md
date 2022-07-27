@@ -24,8 +24,8 @@
 
 假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−2^31,  2^31 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。
 
-[详情见力扣](https://leetcode-cn.com/problems/reverse-integer/)
+[详情见力扣](https://leetcode.cn/problems/reverse-integer/)
 
 # 分析
 
-[详情见博客](https://bruceking.site/2020/01/09/leetcode-cn-problem-0007-reverse-integer/)
+[详情见博客](https://bruceking.org/2020/01/09/leetcode-cn-problem-0007-reverse-integer/)

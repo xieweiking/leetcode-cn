@@ -25,8 +25,8 @@
 
 请注意，你的答案必须是 **子串** 的长度，"pwke" 是一个 *子序列*，不是子串。
 
-[详情见力扣](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
+[详情见力扣](https://leetcode.cn/problems/longest-substring-without-repeating-characters/)
 
 # 分析
 
-[详情见博客](https://bruceking.site/2019/12/31/leetcode-cn-problem-0003-longest-substring-without-repeating-characters/)
+[详情见博客](https://bruceking.org/2019/12/31/leetcode-cn-problem-0003-longest-substring-without-repeating-characters/)
